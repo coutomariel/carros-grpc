@@ -29,7 +29,7 @@ class CarrosEndpoint(@Inject val repository: CarrosRepository) : CarrosGRpcServi
         } catch (e: ConstraintViolationException) {
             responseObserver
                 ?.onError(Status.INVALID_ARGUMENT
-                    .withDescription("Dados de entrada inválidos ")
+                    .withDescription("Dados de entrada inválidos")
                     .asRuntimeException())
             return
         }
